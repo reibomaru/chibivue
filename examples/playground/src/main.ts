@@ -1,3 +1,5 @@
-import { helloChibivue } from "chibivue";
+import { createApp } from "chibivue";
 
-helloChibivue();
+createApp({
+  render: () => "<h1>Hello chibivue!</h1>",
+}).mount("#app");
