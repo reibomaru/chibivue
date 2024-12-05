@@ -1,5 +1,9 @@
-import { createApp } from "chibivue";
+import { createApp, h } from "chibivue";
 
 createApp({
-  render: () => "<h1>Hello chibivue!</h1>",
+  render: () =>
+    h("div", {}, [
+      h("p", {}, ["Hello world."]),
+      h("button", {}, ["click me!"]),
+    ]),
 }).mount("#app");
