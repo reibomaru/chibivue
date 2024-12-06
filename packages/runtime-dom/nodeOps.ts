@@ -13,6 +13,10 @@ export const nodeOps: Omit<RendererOptions<Node, Element>, "patchProp"> = {
     return document.createTextNode(text);
   },
 
+  setText(node, text) {
+    node.textContent = text;
+  },
+
   insert: (child, parent, anchor) => {
     parent.insertBefore(child, anchor || null);
   },
