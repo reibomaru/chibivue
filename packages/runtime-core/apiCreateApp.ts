@@ -10,6 +10,11 @@ export type CreateAppFunction<HostElement> = (
   rootComponent: Component
 ) => App<HostElement>;
 
+/**
+ * createAppを生成するファクトリ
+ * @param render
+ * @returns Appをレンダーする関数
+ */
 export function createAppAPI<HostElement>(
   render: RootRenderFunction<HostElement>
 ): CreateAppFunction<HostElement> {
